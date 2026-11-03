@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası – Dizi Kombin</title>
+  <meta name="description" content="Dizi Kombin mobil uygulaması resmi gizlilik politikası. Kullanıcı verilerinin korunması ve gizlilik ilkeleri.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://dizikombin.com/privacy">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #5B50F0;
+      --primary-dark: #4338CA;
+      --primary-light: #EEEDFF;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --bg-page: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --border-color: #E2E8F0;
+      --accent-green: #10B981;
+      --accent-green-bg: #ECFDF5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Header Nav */
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .nav-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      box-shadow: 0 4px 12px rgba(253, 29, 29, 0.25);
+    }
+
+    .contact-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      background: var(--primary-light);
+      transition: all 0.2s ease;
+    }
+
+    .contact-link:hover {
+      background: #e0dfff;
+      color: var(--primary-dark);
+    }
+
+    /* Main Container */
+    main {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--accent-green-bg);
+      color: #065F46;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      border: 1px solid #A7F3D0;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .updated-date {
+      color: var(--text-light);
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    /* Highlights Banner */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .highlight-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .highlight-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .highlight-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Content Card */
+    .content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    /* Section Styling */
+    .policy-section {
+      margin-bottom: 36px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .section-body {
+      padding-left: 44px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    .custom-list {
+      list-style: none;
+      margin: 12px 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .custom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--bg-page);
+      border-radius: 10px;
+      border: 1px solid #EDF2F7;
+      font-weight: 500;
+    }
+
+    .list-icon {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    .notice-box {
+      margin-top: 14px;
+      padding: 14px 18px;
+      background: #FFFBEB;
+      border-left: 4px solid #F59E0B;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      color: #92400E;
+    }
+
+    a.external-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    a.external-link:hover {
+      color: var(--primary-dark);
+    }
+
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, #EEEDFF, #F5F3FF);
+      border: 1px solid #DDD6FE;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .contact-box-text {
+      font-size: 0.95rem;
+      color: #4C1D95;
+      font-weight: 500;
+    }
+
+    .email-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(91, 80, 240, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .email-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      background: #FFFFFF;
+      padding: 40px 24px;
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.88rem;
+    }
+
+    .footer-quote {
+      max-width: 600px;
+      margin: 0 auto 16px;
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 0.96rem;
+    }
+
+    @media (max-width: 640px) {
+      .content-card {
+        padding: 24px 18px;
+      }
+      .section-body {
+        padding-left: 0;
+        margin-top: 8px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <div class="brand-icon">👗</div>
+        <span>Dizi Kombin</span>
+      </a>
+      <a href="mailto:dizikiyafet0@gmail.com" class="contact-link">Bize Ulaşın</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero -->
+    <div class="hero">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        <span>Kullanıcı Gizliliği Taahhüdü</span>
+      </div>
+      <h1>Gizlilik Politikası</h1>
+      <p class="updated-date">Son güncelleme: 01.02.2026</p>
+    </div>
+
+    <!-- Quick Highlights -->
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <div class="highlight-title">Sıfır Kişisel Veri</div>
+        <div class="highlight-desc">Kayıt sistemi veya üyelik gerektirmez, kişisel bilgi talep edilmez.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🚫</div>
+        <div class="highlight-title">Çerez & Takip Yok</div>
+        <div class="highlight-desc">Uygulama çerez (cookie) veya kullanıcı takip mekanizması barındırmaz.</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🔒</div>
+        <div class="highlight-title">Ödeme İşlemi Yok</div>
+        <div class="highlight-desc">Uygulama içinde herhangi bir satın alma veya kredi kartı işlemi yapılmaz.</div>
+      </div>
+    </div>
+
+    <!-- Document Card -->
+    <article class="content-card">
+      <p class="intro-text">
+        Bu gizlilik politikası, <strong>Dizi Kombin</strong> adlı mobil uygulamanın kullanıcı gizliliğine verdiği önemi açıklamak amacıyla hazırlanmıştır. Uygulamayı kullanarak bu gizlilik politikasını kabul etmiş sayılırsınız.
+      </p>
+
+      <!-- 1. Toplanan Veriler -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">1</span>
+          <span>Toplanan Veriler</span>
+        </h2>
+        <div class="section-body">
+          <p>Dizi Kombin uygulaması:</p>
+          <ul class="custom-list">
+            <li>
+              <span class="list-icon">✓</span>
+              <span><strong>a-</strong> Kullanıcı kayıt / giriş sistemi içermez</span>
+            </li>
+            <li>
+              <span class="list-icon">✓</span>
+              <span><strong>b-</strong> Kişisel veri talep etmez</span>
+            </li>
+            <li>
+              <span class="list-icon">✓</span>
+              <span><strong>c-</strong> Satın alma veya ödeme işlemi barındırmaz</span>
+            </li>
+          </ul>
+          <div class="notice-box">
+            Uygulama kapsamında ad, soyad, e-posta, telefon numarası, konum bilgisi gibi kişisel veriler <strong>kesinlikle toplanmamaktadır</strong>.
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Otomatik Olarak Toplanan Bilgiler -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">2</span>
+          <span>Otomatik Olarak Toplanan Bilgiler</span>
+        </h2>
+        <div class="section-body">
+          <p>Uygulama, yalnızca aşağıdaki anonim ve teknik verileri dolaylı olarak toplayabilir:</p>
+          <ul class="custom-list">
+            <li>
+              <span class="list-icon">•</span>
+              <span><strong>a-</strong> Cihaz türü ve işletim sistemi bilgisi</span>
+            </li>
+            <li>
+              <span class="list-icon">•</span>
+              <span><strong>b-</strong> Uygulamanın genel kullanım istatistikleri</span>
+            </li>
+          </ul>
+          <p>Bu bilgiler kimlik tespiti yapılmadan, yalnızca uygulama performansını ve kullanıcı deneyimini geliştirmek amacıyla kullanılır.</p>
+        </div>
+      </section>
+
+      <!-- 3. Çerezler (Cookies) -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">3</span>
+          <span>Çerezler (Cookies)</span>
+        </h2>
+        <div class="section-body">
+          <p>Dizi Kombin uygulaması çerez (cookie) kullanmaz.</p>
+        </div>
+      </section>
+
+      <!-- 4. Üçüncü Taraf Hizmetler -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">4</span>
+          <span>Üçüncü Taraf Hizmetler</span>
+        </h2>
+        <div class="section-body">
+          <p>Uygulama içinde üçüncü taraf reklam, ödeme veya kullanıcı takip servisleri bulunmamaktadır.</p>
+          <p style="margin-top: 10px;">
+            Ancak uygulama Google Play altyapısı üzerinden indirildiği için, Google’ın kendi gizlilik politikaları geçerli olabilir. Detaylar için: 
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="external-link">Google Gizlilik Politikası</a> sayfasını inceleyebilirsiniz.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5. Çocukların Gizliliği -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">5</span>
+          <span>Çocukların Gizliliği</span>
+        </h2>
+        <div class="section-body">
+          <p>Dizi Kombin, 13 yaş altı çocuklardan bilerek herhangi bir kişisel veri toplamaz. Uygulamada kullanıcıdan veri talep edilmediği için çocukların gizliliği korunmaktadır.</p>
+        </div>
+      </section>
+
+      <!-- 6. Veri Güvenliği -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">6</span>
+          <span>Veri Güvenliği</span>
+        </h2>
+        <div class="section-body">
+          <p>Uygulama herhangi bir kişisel veri toplamadığı için kullanıcıya ait veri saklama veya üçüncü kişilerle paylaşma durumu söz konusu değildir.</p>
+        </div>
+      </section>
+
+      <!-- 7. Gizlilik Politikası Değişiklikleri -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">7</span>
+          <span>Gizlilik Politikası Değişiklikleri</span>
+        </h2>
+        <div class="section-body">
+          <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Güncellemeler bu sayfa üzerinden yayınlanır ve yayınlandığı tarihten itibaren geçerli olur.</p>
+        </div>
+      </section>
+
+      <!-- 8. İletişim -->
+      <section class="policy-section">
+        <h2 class="section-title">
+          <span class="section-number">8</span>
+          <span>İletişim</span>
+        </h2>
+        <div class="section-body">
+          <p>Gizlilik politikası ile ilgili her türlü soru, öneri ve görüşleriniz için bizimle dilediğiniz zaman iletişime geçebilirsiniz:</p>
+          
+          <div class="contact-box">
+            <div class="contact-box-text">
+              <strong>Sorularınız mı var?</strong><br>
+              Yetkili ekibimize doğrudan e-posta gönderebilirsiniz.
+            </div>
+            <a href="mailto:dizikiyafet0@gmail.com" class="email-button">
+              <span>📧 dizikiyafet0@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-quote">
+      “Dizi Kombin kullanıcı gizliliğine önem verir ve kişisel veri toplamadan hizmet sunmayı ilke edinir.”
+    </div>
+    <div>
+      © 2026 Dizi Kombin. Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+</body>
+</html>
